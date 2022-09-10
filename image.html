@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    section{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: url(111.jpg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h2{
+      font-size: 16vw;
+      color: rgb(20, 241, 31);
+      background-color: transparent;
+      padding: 20px 40px;
+      mix-blend-mode: screen;
+    }
+  </style>
+</head>
+<body>
+  <section>
+  <h2>Random</h2>
+</section>
+
+<script>
+
+  function changeBg(){
+
+    const images = [
+      'url("111.jpg")',
+      'url("222.jpg")',
+      'url("333.jpg")',
+      'url("444.jpg")',
+      'url("555.jpg")',
+      'url("666.jpg")',
+      'url("777.jpg")',
+      'url("888.jpg")',
+      'url("999.jpg")',
+      'url("aaa.jpg")',
+      'url("bbb.jpg")',
+      'url("ccc.jpg")',
+      'url("ddd.jpg")',
+      'url("eee.jpg")',
+      'url("fff.jpg")',
+      'url("ggg.jpg")',
+      'url("hhh.jpg")',
+    ]
+    const section = document.querySelector('section')
+    const bg = images[Math.floor(Math.random()*images.length)];
+    section.style.backgroundImage = bg;
+  }
+
+  setInterval(changeBg,2000)
+
+
+
+</script>
+</body>
+</html>
